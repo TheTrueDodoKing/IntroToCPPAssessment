@@ -1,4 +1,5 @@
 #pragma once
+#include "raylib.h"
 class Transform2D;
 class Collider;
 class Component;
@@ -88,6 +89,15 @@ public:
     /// <param name="other">The actor this actor collided with.</param>
     virtual void onCollision(Actor* other);
 
+    struct Icon 
+    {
+    private:
+        Raylib::Color _color
+
+    public:
+
+    };
+
 protected:
     const char* m_name;
 
@@ -97,5 +107,6 @@ private:
     Collider* m_collider;
     Component** m_components;
     int m_componentCount;
+
 };
 
